@@ -13,9 +13,18 @@ class Box {
   }
   display(){
     var pos =this.body.position;
+  
+    push();
+    translate(pos.x,pos.y);
+    rotate(this.body.angle);
+    
     rectMode(CENTER);
     fill(255);
-    rect(pos.x, pos.y, this.width, this.height);
+    rect(0,0, this.width, this.height);
+    
     pop();
+  
   }
-};
+}
+
+
